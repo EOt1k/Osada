@@ -1,0 +1,25 @@
+conversations:
+  rl:
+    quester: "Собака"
+    NPC_options:
+      node_1:
+        text: Что в мешочке?
+        pointers: node_2, node_3
+      node_4:
+        text: (обыскал) А это у тебя откуда?
+        pointers: node_5
+      node_6:
+        text: Ну раз для Пита то проходи
+      node_7:
+        text: Ну я же тоже твой друг (ухмыляется и забирает бутылку)
+    first: node_1
+    player_options:
+      node_2:
+        text: Это Бутылки Ром, несу их для Пита (пропускает с бутылками)
+        pointers: node_6
+      node_3:
+        text: У меня ничего нет (забирает бутылку)
+        pointers: node_4
+      node_5:
+        text: Мне нужно это отнести другу
+        pointers: node_7

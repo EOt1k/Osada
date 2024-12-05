@@ -1,0 +1,16 @@
+conditions:
+  meat: hand meat
+  tag1: tag loc
+  point: point start 4
+  tag2: tag tag2
+  hub1: tag hub1
+  hub2: tag hub2
+  surv: tag surv
+  in_secretRoom3: region teso
+  in_secretRoom2: region teso2
+  in_secretRoom4: region end
+  in_secretRoom: or in_secretRoom2,in_secretRoom3,in_secretRoom4
+  arena: tag arena
+  inArena: location -628;77;290;world 3
+  cd: objective cd
+  cd2: objective cd2

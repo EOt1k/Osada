@@ -1,0 +1,153 @@
+events:
+  test1: notify ХУЙ
+  loc: folder loc1,loc2
+  loc1: notify Заходя на порог дома, вы вспоминаете что давненько не кормили свою собаку
+  loc2: tag add loc
+  tag2: tag add tag2
+  portal: paste -5027;-29;-2397;world portal3.schem
+  tp: teleport -5025;-29;-2397;world
+  por: command fakeblock show portal1 %player%
+  por2: command fakeblock hide portal1 %player%
+  por3: command fakeblock show portal2 %player%
+  port: folder por2,por3,obj_por
+  obj_por: objective add loc2
+  joconv: conversation Джони
+  jconv: conversation Джони2
+ 
+  tp_end: teleport 88;75;-214;world_the_end
+
+  end: folder dam,tp_end2
+  tp_end2: teleport 85;75;-211;world_the_end
+  dam: damage 15
+
+  strela: give strela3:1
+
+  compas_give: compass add compassHolmar
+  
+  a: folder por,tp,joconv conditions:point delay:1
+
+  drag_move: movenpc 6 13;64;-24;world_the_end 13;64;-14;world_the_end 
+  drag_move2: movenpc 6 13;64;-14;world_the_end 13;64;-24;world_the_end
+  dm: folder drag_move,drag_move2 period:2
+
+  drag_move3: movenpc 1 1;67;33;world_the_end 1;49;20;world_the_end
+
+  boom: explosion 0 0 4 89;76;-215;world_the_end
+
+  point: point start 1 action:add
+
+  arm: folder arm1,arm2,arm3,arm4
+  arm1: objective add armor1
+  arm2: objective add armor2
+  arm3: objective add armor3
+  arm4: objective add armor4
+
+  arm_obj: objective add stand
+  arm_give: give helm,chestp,foot,bots
+  noti: notify Надо надеть броню, меня ждут друзья
+
+  fol: folder eff,nott delay:2
+  nott: notify &oМир расплывается, и жизнь проносится перед глазами.Неужели это конец? 
+  eff: folder eff1,eff2,eff3 
+  eff1: effect BLINDNESS 10 1 ambient noicon
+  eff2: effect SLOW_FALLING 10 1 ambient noicon
+  eff3: effect SLOW 10 1 ambient noicon
+
+  hub1: tag add hub1
+  hub2: tag add hub2
+  
+
+  survival: sudo surv
+  surv_tag: tag add surv
+
+  buy: opsudo arm buy arenda
+  weapon: opsudo weapon_shop %player%
+  armor: sudo armor_shop
+
+  arena: folder aren,arew,are
+  arew: objective add arena_leave
+  aren: command ama join slime_arena %player% 
+  are_leame: sudo ama leave
+  are: tag add arena
+  buybrom: sudo brom_shop
+
+  onEnterLocation: if inArena notify3 else notifyLeft 
+  onEnterLocation2: "if inArena notify2 else notifyLeft"
+  onEnterLocation3: "if inArena notify1 else notifyLeft"
+  onEnterLocation4: "if inArena fol4 else notifyLeft"
+  fol3: folder onEnterLocation,onEnterLocation2,onEnterLocation3,onEnterLocation4 delay:1 period:1
+  notify3: "notify Вы покинете арену через 3 conditions:inArena"
+  notify2: "notify Вы покинете арену через 2 conditions:inArena"
+  notify1: "notify Вы покинете арену через 1 conditions:inArena"
+  notifyLeft: folder noti1,noti2 conditions:!cd2
+  noti1: "notify Вы покинули арену"
+  noti2: objective add cd2
+  ar_leave: tag del arena
+  fol4: folder are_leame,ar_leave
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  #####ОСАДА######
+  red_lobby: teleport -237;73;-66;world
+  blue_lobby: teleport -217;73;-66;world
+
+  red_obj: objective add red_npc
+  blue_obj: objective add blue_npc
+  
+  del_red_obj: objective delete red_npc
+  del_blue_obj: objective delete blue_npc
+
+  team: folder red_obj,blue_obj
+  ################

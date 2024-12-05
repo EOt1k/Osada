@@ -1,0 +1,16 @@
+objectives:
+  loc: location -389;73;-85;world 3 events:loc,arm,arm_obj conditions:!tag1 global
+  stand: action any CHEST loc:-389;81;-83;world range:3 events:arm_give,noti
+  jony: location 89;76;-215;world_the_end 5 events:jconv conditions:!tag2 global persistent
+  armor1: equip HEAD helm events:point,a
+  armor2: equip CHEST chestp events:point,a
+  armor3: equip LEGS foot events:point,a
+  armor4: equip FEET bots events:point,a
+  loc2: location -5029;-27;-2396;world 2 events:tp_end
+  arena_leave: location -628;77;290;world 3 entry events:fol3
+  cd2: "delay 1 seconds"
+
+  ###ОСАДА####
+  red_npc: npcinteract 12 interaction:any events:red_lobby,del_blue_obj
+  blue_npc: npcinteract 11 interaction:any events:blue_lobby,del_red_obj
+  ############

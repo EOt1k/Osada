@@ -1,0 +1,14 @@
+conversations:
+  Arena:
+    quester: "Джули"
+    NPC_options:
+      node_1:
+        text: Хочешь войти на моб арену?
+        pointers: node_2, node_3
+    first: node_1
+    player_options:
+      node_2:
+        text: Да
+        events: arena
+      node_3:
+        text: Нет

@@ -1,0 +1,11 @@
+items:
+  meat: COOKED_MUTTON
+  helm: DIAMOND_HELMET durability:0
+  chestp: DIAMOND_CHESTPLATE durability:0
+  foot: DIAMOND_LEGGINGS durability:0
+  bots: DIAMOND_BOOTS durability:0
+  DOOR: ARMOR_STAND durability:0
+  strela2: TIPPED_ARROW durability:0 type:SLOWNESS extended
+  strela3: TIPPED_ARROW durability:0 name:Стрела_Замедления lore:&cOnly_this_sword_can_kill_the_Lord_Ruler
+    flags:HIDE_POTION_EFFECTS type:water effects:SLOW:1:3
+  compas: COMPASS durability:0

@@ -1,0 +1,25 @@
+conversations:
+  Джони:
+    quester: Джони
+    NPC_options:
+      node_1:
+        text:
+          en: Ура друг, мы наконец-то нашли портал, осталось запустить его и мы пройдём эту игру
+        pointers: node_2, node_3
+      node_4:
+        text:
+          en: У нас мало времени, я запускаю портал. Встретимся на той стороне
+        events: port
+      node_5:
+        text:
+          en: Тогда я жду тебя
+    first: node_1
+    player_options:
+      node_2:
+        text:
+          en: Стоп, игру?
+        pointers: node_4
+      node_3:
+        text:
+          en: Погоди я еще не готов
+        pointers: node_5

@@ -1,0 +1,26 @@
+conversations:
+  Travel:
+    quester: Путешественник
+    NPC_options:
+      node_1:
+        text: Хочешь отправится на большую землю?
+        pointers: node_2
+        conditions: "!surv"
+      node_3:
+        text: "Земля этерии это поля нескончаемой битвы. Чтобы выжить тебе предстоит создать свое поселение или присоединится к чужому, добывать ресурсы и сражаться с другими героями за контроль на карте. "
+        pointers: node_4
+      node_6:
+        conditions: surv
+        text: Отправляемся на Большую землю?
+        pointers: node_7
+    first: node_1, node_6
+    player_options:
+      node_2:
+        text: "Что меня там ждет ? "
+        pointers: node_3
+      node_4:
+        text: ...
+        events: survival, surv_tag
+      node_7:
+        text: ...
+        events: survival

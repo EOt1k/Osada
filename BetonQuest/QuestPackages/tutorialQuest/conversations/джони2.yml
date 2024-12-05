@@ -1,0 +1,15 @@
+conversations:
+  Джони2:
+    quester: Джони
+    NPC_options:
+      node_1:
+        text: Ура друг мы убили дракона и прошли игру. Победа
+        pointers: node_2
+      node_3:
+        text: Мне лень все тебе объяснять. Прости и прощай
+        events: end, tag2, fol
+    first: node_1
+    player_options:
+      node_2:
+        text: Какая игра? Что вообще происходит?
+        pointers: node_3
