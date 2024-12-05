@@ -150,4 +150,4 @@ events:
   del_blue_obj: objective delete blue_npc
 
   team: folder red_obj,blue_obj
-  ################
+  #################
